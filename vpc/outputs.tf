@@ -8,9 +8,14 @@ output "vpc_id" {
 #   value       = module.vpc.vpc_arn
 # }
 
-output "vpc_cidr_block" {
-  description = "The CIDR block of the VPC"
-  value       = module.vpc.vpc_cidr_block
+# output "vpc_cidr_block" {
+#   description = "The CIDR block of the VPC"
+#   value       = module.vpc.vpc_cidr_block
+# }
+
+output "vpc_cidr" {
+  description = "The VPC CIDR"
+  value = "${var.CIDR}"
 }
 
 # output "default_security_group_id" {
