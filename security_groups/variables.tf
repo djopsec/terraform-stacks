@@ -15,9 +15,3 @@ variable "org" {
   type        = string
   default     = "djopsec"
 }
-
-variable "CIDR" {
-  description = "CIDR Configuration"
-  type        = string
-  default     = "10.70"
-}
