@@ -27,7 +27,7 @@ provider "aws" {
 locals {
   vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id
   region = data.terraform_remote_state.vpc.outputs.vpc_region
-  cidr   = data.terraform_remote_state.vpc.outputs.vpc_cidr_block
+  cidr   = data.terraform_remote_state.vpc.outputs.vpc_cidr
 
   tags = {
     Workspace  = "${terraform.workspace}"
