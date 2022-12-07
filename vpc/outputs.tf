@@ -1,3 +1,8 @@
+output "vpc_region" {
+  description = "The VPC CIDR"
+  value = "${var.region}"
+}
+
 output "vpc_id" {
   description = "The ID of the VPC"
   value       = module.vpc.vpc_id
