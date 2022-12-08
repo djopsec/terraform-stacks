@@ -39,6 +39,8 @@ locals {
   vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id
   region = data.terraform_remote_state.vpc.outputs.vpc_region
   cidr   = data.terraform_remote_state.vpc.outputs.vpc_cidr
+  private_sg = data.terraform_remote_state.sg.outputs.all_private_security_group_id
+  private_subnets = data.terraform_remote_state.vpc.private_subnets
 
   tags = {
     Workspace  = "${terraform.workspace}"
