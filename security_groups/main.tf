@@ -36,6 +36,7 @@ locals {
   }
 }
 
+#### public security group for https  ####
 resource "aws_security_group" "public_https" {
   name        = "public_https"
   description = "Allow HTTPS inbound traffic for public subnets"
@@ -59,6 +60,7 @@ resource "aws_security_group" "public_https" {
   tags = local.tags
 }
 
+#### private security group for internal subnets ####
 resource "aws_security_group" "all_private" {
   name        = "all_private"
   description = "Allow inbound outbound traffic internally in private subnets"
