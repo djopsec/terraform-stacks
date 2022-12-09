@@ -42,7 +42,6 @@ locals {
   private_subnets = data.terraform_remote_state.vpc.outputs.private_subnets[0]
 
   tags = {
-    Workspace  = "${terraform.workspace}"
     GithubRepo = "${var.repo}"
     GithubOrg  = "${var.org}"
   }

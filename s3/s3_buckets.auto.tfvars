@@ -1,8 +1,8 @@
 s3_list = {
-  "demo-1" = {
+  "djopsec-demo-1" = {
     "purpose" = "Demo"
   },
-  "demo-2" = {
+  "djopsec-demo-2" = {
     "purpose" = "Demo"
   }
 }

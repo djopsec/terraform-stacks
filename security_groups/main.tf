@@ -30,7 +30,6 @@ locals {
   cidr   = data.terraform_remote_state.vpc.outputs.vpc_cidr
 
   tags = {
-    Workspace  = "${terraform.workspace}"
     GithubRepo = "${var.repo}"
     GithubOrg  = "${var.org}"
   }

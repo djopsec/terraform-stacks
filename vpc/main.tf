@@ -19,7 +19,6 @@ locals {
   cidr   = "${var.CIDR}"
 
   tags = {
-    Workspace  = "${terraform.workspace}"
     GithubRepo = "${var.repo}"
     GithubOrg  = "${var.org}"
   }

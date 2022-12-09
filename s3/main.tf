@@ -23,7 +23,6 @@ locals {
   region = var.region
 
   tags = {
-    Workspace  = "${terraform.workspace}"
     GithubRepo = "${var.repo}"
     GithubOrg  = "${var.org}"
   }
