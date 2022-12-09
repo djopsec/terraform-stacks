@@ -1,14 +1,3 @@
-data "terraform_remote_state" "vpc" {
-  backend = "remote"
-
-  config = {
-    organization = "terraform-stacks-demo"
-    workspaces = {
-      name = "demo-vpc"
-    }
-  }
-}
-
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
@@ -26,10 +15,13 @@ provider "aws" {
 
 provider "tfvars" {}
 
+data "tfvars_file" "s3" {
+  filename = "s3_buckets.auto.tfvars"
+}
+
 locals {
-  vpc_id          = data.terraform_remote_state.vpc.outputs.vpc_id
-  region          = data.terraform_remote_state.vpc.outputs.vpc_region
-  
+  region = var.region
+
   tags = {
     Workspace  = "${terraform.workspace}"
     GithubRepo = "${var.repo}"
