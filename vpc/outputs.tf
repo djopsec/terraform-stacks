@@ -1,6 +1,6 @@
 output "vpc_region" {
   description = "The VPC CIDR"
-  value = "${var.region}"
+  value = var.region
 }
 
 output "vpc_id" {
@@ -10,7 +10,7 @@ output "vpc_id" {
 
 output "vpc_cidr" {
   description = "The VPC CIDR"
-  value = "${var.CIDR}"
+  value = var.CIDR
 }
 
 output "private_subnets" {
