@@ -17,21 +17,21 @@ variable "region" {
 }
 
 variable "logs_bucket" {
-  type = string
+  type    = string
   default = "djopsec-demo-cloudtrail-logs"
 }
 
 variable "s3_key_prefix" {
-  type = string
+  type    = string
   default = "cloudtrail"
 }
 
 variable "trail_name" {
-  type = string
+  type    = string
   default = "demo"
 }
 
 variable "cloudwatch_log_group_name" {
-  type = string
+  type    = string
   default = "demo"
 }
