@@ -6,7 +6,7 @@ terraform {
       source  = "hashicorp/aws"
       version = ">= 3.28"
     }
-/*     tfvars = {
+    /*     tfvars = {
       source  = "innovationnorway/tfvars"
       version = "0.0.1"
     } */
