@@ -19,11 +19,11 @@ provider "aws" {
 #   filename = "s3_buckets.auto.tfvars"
 # }
 
-# locals {
-#   region = var.region
+ locals {
+   region = var.region
 
-#   tags = {
-#     GithubRepo = "${var.repo}"
-#     GithubOrg  = "${var.org}"
-#   }
-# }
+   tags = {
+     GithubRepo = "${var.repo}"
+     GithubOrg  = "${var.org}"
+   }
+ } 
