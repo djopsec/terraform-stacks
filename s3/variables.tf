@@ -1,4 +1,4 @@
-variable "repo" {
+/* variable "repo" {
   description = "GitHub repo"
   type        = string
   default     = "terraform-stacks"
@@ -24,4 +24,4 @@ variable "s3_list" {
       "purpose" = "demo"
     }
   }
-}
+} */
