@@ -10,13 +10,13 @@ terraform {
 }
 
 provider "aws" {
-  region = "${local.region}"
+  region = local.region
 }
 
 locals {
-  name   = "${var.vpc_name}"
-  region = "${var.region}"
-  cidr   = "${var.CIDR}"
+  name   = var.vpc_name
+  region = var.region
+  cidr   = var.CIDR
 
   tags = {
     GithubRepo = "${var.repo}"
